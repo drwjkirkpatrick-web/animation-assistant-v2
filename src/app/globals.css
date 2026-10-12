@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .card {
+    @apply bg-ocean-mid/60 rounded-2xl shadow-md hover:shadow-lg transition-shadow p-6 border border-ocean-surf/20 backdrop-blur-sm;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-ocean-foam hover:bg-ocean-glow text-ocean-deep font-bold px-6 py-3 rounded-full transition-colors shadow-md;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-transparent hover:bg-ocean-surf/30 text-ocean-glow border-2 border-ocean-surf font-bold px-6 py-3 rounded-full transition-colors shadow-md;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+}
+
+/* Markdown content styling on lesson pages */
+.prose-ocean {
+  @apply text-sea-text leading-relaxed;
+}
+.prose-ocean h1 {
+  @apply text-3xl font-bold text-white mb-4;
+}
+.prose-ocean h2 {
+  @apply text-2xl font-bold text-ocean-glow mt-8 mb-4 pb-2 border-b-2 border-ocean-surf/30;
+}
+.prose-ocean h3 {
+  @apply text-xl font-bold text-ocean-foam mt-6 mb-3;
+}
+.prose-ocean h4 {
+  @apply text-lg font-bold text-sea-muted mt-4 mb-2;
+}
+.prose-ocean p {
+  @apply my-3;
+}
+.prose-ocean ul {
+  @apply list-disc list-inside my-3 space-y-1;
+}
+.prose-ocean ol {
+  @apply list-decimal list-inside my-3 space-y-1;
+}
+.prose-ocean li {
+  @apply leading-relaxed;
+}
+.prose-ocean strong {
+  @apply font-bold text-ocean-glow;
+}
+.prose-ocean blockquote {
+  @apply border-l-4 border-ocean-foam bg-ocean-surf/5 pl-4 py-2 my-4 italic text-sea-muted rounded-r-lg;
+}
+.prose-ocean code {
+  @apply bg-ocean-deep/60 text-ocean-glow px-1.5 py-0.5 rounded text-sm font-mono border border-ocean-surf/20;
+}
+.prose-ocean pre {
+  @apply bg-ink rounded-xl p-4 my-4 overflow-x-auto text-sm border border-ocean-surf/20;
+}
+.prose-ocean pre code {
+  @apply bg-transparent text-ocean-glow p-0 border-0;
+}
+.prose-ocean table {
+  @apply w-full my-4 border-collapse;
+}
+.prose-ocean th {
+  @apply bg-ocean-surf/20 text-ocean-glow font-bold text-left p-3 border border-ocean-surf/30 rounded-t-lg;
+}
+.prose-ocean td {
+  @apply p-3 border border-ocean-surf/20 text-sm;
+}
+.prose-ocean tr:nth-child(even) {
+  @apply bg-ocean-mid/40;
+}
+.prose-ocean hr {
+  @apply my-6 border-ocean-surf/30;
+}
+.prose-ocean a {
+  @apply text-ocean-glow underline hover:text-white;
+}
+.prose-ocean img {
+  @apply rounded-xl my-4 max-w-full h-auto;
+}

@@ -1,0 +1,7 @@
+.vercel
+.next
+out
+node_modules
+*.log
+.DS_Store
+src/data/lessons.json
